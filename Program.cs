@@ -13,8 +13,7 @@ namespace Words
     {
         static void Main(string[] args)
         {
-
-            WordCounter.CountWords(true, true);
+            WordCounter.CountWords(true, false);
             Console.ReadKey();
         }        
     }
