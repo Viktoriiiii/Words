@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Words
 {
@@ -13,7 +6,7 @@ namespace Words
     {
         static void Main(string[] args)
         {
-            WordCounter.CountWords(true, false);
+            WordCounter.CountWords(false, true);
             Console.ReadKey();
         }        
     }
