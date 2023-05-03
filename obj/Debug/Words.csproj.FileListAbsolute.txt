@@ -1,0 +1,11 @@
+D:\AleKoN\Words\Words\bin\Debug\Words.exe.config
+D:\AleKoN\Words\Words\bin\Debug\Words.exe
+D:\AleKoN\Words\Words\bin\Debug\Words.pdb
+D:\AleKoN\Words\Words\obj\Debug\Words.csproj.AssemblyReference.cache
+D:\AleKoN\Words\Words\obj\Debug\Words.csproj.SuggestedBindingRedirects.cache
+D:\AleKoN\Words\Words\obj\Debug\Words.csproj.CoreCompileInputs.cache
+D:\AleKoN\Words\Words\obj\Debug\Words.exe
+D:\AleKoN\Words\Words\obj\Debug\Words.pdb
+D:\AleKoN\Words\Words\bin\Debug\Newtonsoft.Json.dll
+D:\AleKoN\Words\Words\bin\Debug\Newtonsoft.Json.xml
+D:\AleKoN\Words\Words\obj\Debug\Words.csproj.CopyComplete
