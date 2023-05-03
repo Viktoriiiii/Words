@@ -24,7 +24,10 @@ namespace Words
 
             Dictionary<string, int> wordsCount = new Dictionary<string, int>();
 
-            foreach (var file in directoryInfo.GetFiles())
+
+            FileInfo[] files = directoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
+            int count = 1;
+            foreach (var file in files)
             {
                 wordsCount.Clear();
                 string fileContent = File.ReadAllText(file.FullName);
@@ -35,10 +38,11 @@ namespace Words
                     {
                         { file.Name, wordsCount }
                     };
-                    WriteWordsInFile(filesWithWords, "result-" + file.Name);
+                    WriteWordsInFile(filesWithWords, $"result-{count}-{file.Name}");
+                    count++;
                 }
-                    
-            }
+            }            
+
             if (!flagOtherFiles)                
                 WriteWordsInFile(wordsCount, "result.txt");
 
