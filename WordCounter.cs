@@ -42,6 +42,9 @@ namespace Words
 
             FileInfo[] files = directoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
             int count = 1;
+
+            string name = flagForPreposition ? "result-with-preposition" : "result-without-preposition";
+
             foreach (var file in files)
             {
                 if (flagOtherFiles)
@@ -54,13 +57,13 @@ namespace Words
                     {
                         { file.Name, wordsCount }
                     };
-                    WriteWordsInFile(filesWithWords, $"result-{count}-{file.Name}");
+                    WriteWordsInFile(filesWithWords, $"{name}-{count}-{file.Name}");
                     count++;
                 }
-            }            
+            }
 
-            if (!flagOtherFiles)                
-                WriteWordsInFile(wordsCount, "result.txt");
+            if (!flagOtherFiles)
+                WriteWordsInFile(wordsCount, $"{name}.txt");
 
             Console.WriteLine($"Подсчет слов завершен. Расположение вывода: {AppDomain.CurrentDomain.BaseDirectory}");
         }
@@ -78,6 +81,9 @@ namespace Words
             StringBuilder sb = new StringBuilder(fileContent);
             foreach (char c in AbsentSignsInWords)
                 sb = sb.Replace(c, ' ');
+
+            sb = new StringBuilder(System.Text.RegularExpressions.Regex.Replace(sb.ToString(), @"\s+", " "));
+
             sb = sb.Replace(Environment.NewLine, " ");            
 
             if (flagOtherFiles)
