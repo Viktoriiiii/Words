@@ -6,7 +6,7 @@ namespace Words
     {
         static void Main(string[] args)
         {
-            WordCounter.CountWords(true, false);
+            WordCounter.CountWords(false, true);
             Console.ReadKey();
         }        
     }
